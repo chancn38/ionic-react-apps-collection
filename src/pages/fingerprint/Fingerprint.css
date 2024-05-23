@@ -1,0 +1,35 @@
+ion-modal#remove_acc_modal {
+  --height: 40%;
+  --width: 90%;
+  --height: fit-content;
+  --backdrop-opacity: 0.3;
+  --border-radius: 20px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+  --backdrop-opacity: 0.7;
+}
+
+.biometric-cancel-toast{
+  --max-width: 50%;
+  --border-radius: 25px;
+  text-align: center;
+}
+
+.confirm-btn {
+  --background: #3472c3;
+  text-transform: none;
+  --box-shadow: none;
+  --border-radius: 10px;
+  height: 45px;
+  margin-left: 10px;
+}
+
+.logout-cancel-btn {
+  --background: #b8e4fb;
+  border-radius: 10px;
+  text-transform: none;
+  --box-shadow: none;
+  --border-radius: 10px;
+  height: 45px;
+  margin-right: 10px;
+  color: #3472c3;
+}

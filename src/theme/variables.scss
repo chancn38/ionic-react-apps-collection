@@ -1,0 +1,33 @@
+/* For information on how to create your own theme, please see:
+http://ionicframework.com/docs/theming/ */
+:root {
+  --ion-background-color: #ffffff;
+  --ion-text-color: #000000;
+}
+
+body.dark {
+  --ion-background-color: #292929;
+  --ion-text-color: #ffffff;
+}
+
+.dark {
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+}
+
+
+ion-modal#dialog-modal {
+  --height: 40%;
+  --width: 90%;
+  --height: fit-content;
+  --backdrop-opacity: 0.3;
+  --border-radius: 25px;
+  --box-shadow: none;
+  backdrop-filter: blur(2px) brightness(0.8);
+}
+
+.btn {
+  --border-radius: 10px;
+  --box-shadow: none;
+  width: 100%;
+}

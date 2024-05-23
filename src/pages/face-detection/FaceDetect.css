@@ -1,0 +1,13 @@
+.app { 
+    text-align: center;
+}
+
+.app__video {
+    display: flex;
+    align-items: center;
+}
+
+.app__canvas {
+    position: absolute;
+margin-left: -40px;
+}
