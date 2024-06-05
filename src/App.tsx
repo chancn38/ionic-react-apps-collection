@@ -48,6 +48,8 @@ import './theme/global.scss'
 import './theme/variables.scss'
 import Fingerprint from './pages/fingerprint/Fingerprint'
 import PhoneSettings from './pages/phone-settings/PhoneSettings'
+import About from './pages/about/About'
+import OCR from './pages/ocr/OCR'
 
 setupIonicReact()
 
@@ -74,6 +76,9 @@ const App: React.FC = () => {
             <Route path='/settings/:name' exact={true}>
               <Settings />
             </Route>
+            <Route path='/about/:name' exact={true}>
+              <About />
+            </Route>
 
             {/* Apps */}
             <Route path='/scanqr/:name' exact={true}>
@@ -87,6 +92,9 @@ const App: React.FC = () => {
             </Route>
             <Route path='/phonesettings/:name' exact={true}>
               <PhoneSettings />
+            </Route>
+            <Route path='/ocr/:name' exact={true}>
+              <OCR />
             </Route>
             <Route path='/facedetect/:name' exact={true}>
               <FaceDetect />

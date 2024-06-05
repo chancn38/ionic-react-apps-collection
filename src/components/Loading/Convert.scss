@@ -1,0 +1,43 @@
+.loading-container {
+  box-shadow: none;
+  height: 90vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  ion-card {
+    box-shadow: none;
+  }
+  progress {
+    width: 80%;
+    height: 20px;
+  }
+
+  .col-lbl {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .col-icons {
+    margin-bottom: 20px;
+    .col-img {
+      display: flex;
+      justify-content: right;
+    }
+    .arrow-col {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .col-text {
+      display: flex;
+      justify-content: left;
+    }
+  }
+
+  ion-img {
+    width: 30px;
+  }
+}

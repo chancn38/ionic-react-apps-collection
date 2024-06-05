@@ -29,7 +29,7 @@ const QRCodeGenerator: React.FC = () => {
       try {
         // Check if the directory exists
         await Filesystem.readdir({
-          path: 'eiMAN',
+          path: 'QRGenerated',
           directory: Directory.Documents
         })
       } catch (error) {
@@ -37,7 +37,7 @@ const QRCodeGenerator: React.FC = () => {
         try {
           // Create the directory
           await Filesystem.mkdir({
-            path: 'eiMAN',
+            path: 'QRGenerated',
             directory: Directory.Documents,
             recursive: true
           })
@@ -51,11 +51,22 @@ const QRCodeGenerator: React.FC = () => {
     checkDirectory()
   }, [])
 
+  // const downloadCardAsImage = () => {
+  //   const cardElement = document.getElementById('qrcode');
+    
+  //   html2canvas(cardElement).then(canvas => {
+  //     const link = document.createElement('a');
+  //     link.href = canvas.toDataURL('image/png');
+  //     link.download = 'business-card.png';
+  //     link.click();
+  //   });
+  // };
+
   const handleDownload = async () => {
     const canvas = document.getElementById('qrcode') as HTMLCanvasElement
     const imageDataUrl = canvas.toDataURL('image/png')
-    const fileName = 'qrcode.png'
-    const directoryPath = 'eiMAN'
+    const fileName = `${text}.png`
+    const directoryPath = 'QRGenerated'
 
     try {
       setLoading(true) // Show loading indicator

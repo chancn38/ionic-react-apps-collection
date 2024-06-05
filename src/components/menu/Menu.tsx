@@ -15,6 +15,8 @@ import { Plugins } from '@capacitor/core'
 import {
   fingerPrintOutline,
   gridOutline,
+  informationCircleOutline,
+  informationOutline,
   logOutOutline,
   moonOutline,
   notificationsOutline,
@@ -47,6 +49,12 @@ const menuPages: AppPage[] = [
     url: '/settings/Settings',
     iosIcon: settingsOutline,
     mdIcon: settingsOutline
+  },
+  {
+    title: 'About',
+    url: '/about/About',
+    iosIcon: informationCircleOutline,
+    mdIcon: informationCircleOutline
   }
 ]
 
@@ -74,6 +82,12 @@ const appPages: AppPage[] = [
     url: '/phonesettings/Phone Settings',
     iosIcon: phonePortraitOutline,
     mdIcon: phonePortraitOutline
+  },
+  {
+    title: 'OCR',
+    url: '/ocr/OCR',
+    iosIcon: scanOutline,
+    mdIcon: scanOutline
   },
   {
     title: 'Face Detection',

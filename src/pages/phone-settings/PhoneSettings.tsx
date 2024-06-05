@@ -1,25 +1,25 @@
 import {
-    IonButtons,
-    IonCardContent,
-    IonCardHeader,
-    IonCardTitle,
-    IonContent,
-    IonHeader,
-    IonIcon,
-    IonItem,
-    IonLabel,
-    IonList,
-    IonMenuButton,
-    IonPage,
-    IonTitle,
-    IonToolbar
+  IonButtons,
+  IonCardContent,
+  IonCardHeader,
+  IonCardTitle,
+  IonContent,
+  IonHeader,
+  IonIcon,
+  IonItem,
+  IonLabel,
+  IonList,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar
 } from '@ionic/react'
 import {
-    AndroidSettings,
-    IOSSettings,
-    NativeSettings
+  AndroidSettings,
+  IOSSettings,
+  NativeSettings
 } from 'capacitor-native-settings'
-import { accessibilityOutline, airplaneOutline, alarmOutline, appsOutline, batteryChargingOutline, batteryHalfOutline, bluetoothOutline, bookOutline, calendarOutline, cardOutline, codeSlashOutline, cogOutline, desktopOutline, fingerPrintOutline, globeOutline, informationOutline, keyOutline, keypadOutline, laptopOutline, locationOutline, logoClosedCaptioning, logoWhatsapp, megaphoneOutline, micOutline, notificationsOutline, personOutline, printOutline, radioOutline, readerOutline, saveOutline, searchOutline, settingsOutline, shieldHalfOutline, statsChartOutline, syncOutline, timeOutline, walletOutline, wifiOutline, wifiSharp } from 'ionicons/icons'
+import { accessibilityOutline, airplaneOutline, alarmOutline, appsOutline, batteryChargingOutline, bluetoothOutline, bookOutline, calendarOutline, cardOutline, codeSlashOutline, cogOutline, desktopOutline, fingerPrintOutline, globeOutline, informationOutline, keypadOutline, laptopOutline, locationOutline, logoClosedCaptioning, logoWhatsapp, megaphoneOutline, micOutline, notificationsOutline, personOutline, printOutline, radioOutline, readerOutline, saveOutline, searchOutline, shieldHalfOutline, statsChartOutline, syncOutline, timeOutline, walletOutline, wifiOutline, wifiSharp } from 'ionicons/icons'
 import { useParams } from 'react-router-dom'
 import fingerprint_settings from '../../assets/images/fingerprint_settings.png'
 import './PhoneSettings.css'

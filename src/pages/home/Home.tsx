@@ -20,6 +20,7 @@ import {
     peopleOutline,
     phonePortraitOutline,
     qrCodeOutline,
+    scanOutline,
     settingsOutline,
     statsChartOutline,
     walletOutline
@@ -79,15 +80,15 @@ const Home = () => {
               </IonCard>
             </IonCol>
             <IonCol size='4'>
-              <IonCard button className='card'>
+              <IonCard button className='card' routerLink='/ocr/OCR'>
                 <IonCardHeader>
-                  <IonIcon icon={peopleOutline} className='card-icon' />
-                  <IonLabel>Users</IonLabel>
+                  <IonIcon icon={scanOutline} className='card-icon' />
+                  <IonLabel>OCR</IonLabel>
                 </IonCardHeader>
               </IonCard>
             </IonCol>
           </IonRow>
-          <IonRow>
+          {/* <IonRow>
             <IonCol size='4'>
               <IonCard button className='card'>
                 <IonCardHeader>
@@ -112,7 +113,7 @@ const Home = () => {
                 </IonCardHeader>
               </IonCard>
             </IonCol>
-          </IonRow>
+          </IonRow> */}
         </IonGrid>
       </IonContent>
     </IonPage>
