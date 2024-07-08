@@ -13,6 +13,7 @@ import {
 
 import { Plugins } from '@capacitor/core'
 import {
+  chatbubbleOutline,
   fingerPrintOutline,
   gridOutline,
   informationCircleOutline,
@@ -29,6 +30,8 @@ import {
 import { useLocation } from 'react-router-dom'
 import { useTheme } from '../../context/ThemeContext'
 import './Menu.css'
+import Pusher from 'pusher-js'
+import { useEffect, useState } from 'react'
 
 interface AppPage {
   url: string
@@ -100,6 +103,12 @@ const appPages: AppPage[] = [
     url: '/pushnotification/Push Notification',
     iosIcon: notificationsOutline,
     mdIcon: notificationsOutline
+  },
+  {
+    title: 'Pusher',
+    url: '/pusher/Pusher',
+    iosIcon: chatbubbleOutline,
+    mdIcon: chatbubbleOutline
   }
 ]
 
@@ -112,6 +121,28 @@ const Menu: React.FC = () => {
   const exitApp = () => {
     Plugins.App.exitApp();
   }
+  
+  const [messages, setMessages] = useState<any>([]);
+
+  useEffect(() => {
+    const pusher = new Pusher('2681569319e6de90b233', {
+      cluster: 'ap2',
+    });
+
+    const channel = pusher.subscribe('chat');
+
+    channel.bind('message', (data) => {
+      setMessages((prevMessages) => [...prevMessages, data.message]);
+    });
+
+    // Cleanup on component unmount
+    return () => {
+      channel.unbind_all();
+      pusher.unsubscribe('chat');
+    };
+  }, []);
+
+console.log(messages)
   
   return (
     <IonMenu contentId='main' type='push'>

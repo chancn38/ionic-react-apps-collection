@@ -9,3 +9,10 @@
   color: #3b82f6;
   margin-bottom: 10px;
 }
+
+.list-header {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0px -10px -5px;
+  padding-left: 15px;
+}

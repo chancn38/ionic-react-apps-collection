@@ -1,0 +1,30 @@
+.home-card {
+    margin: 0;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    box-shadow: none;
+    border-radius: 15px;
+    color: #f3f3f3;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+.project-card-icon {
+    div{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: -5px 0 0 10px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255, 0.2);
+    }
+    i{
+      color: #fff !important;
+      opacity: 1;
+      font-size: 20px;
+    }
+  }

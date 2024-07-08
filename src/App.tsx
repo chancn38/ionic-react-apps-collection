@@ -8,6 +8,14 @@ import { IonReactRouter } from '@ionic/react-router'
 import { Redirect, Route } from 'react-router-dom'
 import Menu from './components/menu/Menu'
 
+import "./assets/css/app.min.css";
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/extra.css";
+import "./assets/css/icons-rtl.min.css";
+import "./assets/css/icons.css";
+import "./assets/css/icons.min.css";
+import "./assets/css/theme.css";
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
 
@@ -50,6 +58,7 @@ import Fingerprint from './pages/fingerprint/Fingerprint'
 import PhoneSettings from './pages/phone-settings/PhoneSettings'
 import About from './pages/about/About'
 import OCR from './pages/ocr/OCR'
+import Pusher from './pages/pusher/PusherWebsocket'
 
 setupIonicReact()
 
@@ -104,6 +113,9 @@ const App: React.FC = () => {
             </Route>
             <Route path='/pushnotification/:name' exact={true}>
               <PushNotification />
+            </Route>
+            <Route path='/pusher/:name' exact={true}>
+              <Pusher />
             </Route>
             
           </IonRouterOutlet>
