@@ -27,11 +27,12 @@ import {
   scanOutline,
   settingsOutline
 } from 'ionicons/icons'
-import { useLocation } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 import { useTheme } from '../../context/ThemeContext'
 import './Menu.css'
 import Pusher from 'pusher-js'
 import { useEffect, useState } from 'react'
+import { useAuth } from '../../context/AuthContext'
 
 interface AppPage {
   url: string
@@ -115,6 +116,8 @@ const appPages: AppPage[] = [
 const labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders']
 
 const Menu: React.FC = () => {
+  const { logout } = useAuth();
+  const history = useHistory();
   const location = useLocation()
   const { theme, toggleTheme } = useTheme()
 
@@ -122,6 +125,11 @@ const Menu: React.FC = () => {
     Plugins.App.exitApp();
   }
   
+  const Logout = () => {
+    logout();
+    history.push('/login');
+  }
+
   const [messages, setMessages] = useState<any>([]);
 
   useEffect(() => {
@@ -141,8 +149,6 @@ const Menu: React.FC = () => {
       pusher.unsubscribe('chat');
     };
   }, []);
-
-console.log(messages)
   
   return (
     <IonMenu contentId='main' type='push'>
@@ -212,6 +218,10 @@ console.log(messages)
           <IonItem lines='none' onClick={exitApp}>
             <IonIcon aria-hidden='true' slot='end' icon={logOutOutline} />
             <IonLabel>Exit</IonLabel>
+          </IonItem>
+          <IonItem lines='none' onClick={Logout}>
+            <IonIcon aria-hidden='true' slot='end' icon={logOutOutline} />
+            <IonLabel>Logout</IonLabel>
           </IonItem>
         </IonList>
 
