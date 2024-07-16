@@ -62,7 +62,7 @@ const App: React.FC = () => {
   const { isAuthenticated } = useAuth()
 
   useEffect(() => {
-    StatusBar.setBackgroundColor({ color: '#1e65a8' })
+    StatusBar.setBackgroundColor({ color: '#f4f5f8' })
     StatusBar.setStyle({ style: Style.Dark })
     setTimeout(() => {
       SplashScreen.hide()

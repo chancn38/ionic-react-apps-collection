@@ -4,7 +4,6 @@ import { Redirect, Route } from 'react-router-dom';
 import DashboardPage from '../page/dashboard/DashboardPage';
 import InvitationPage from '../page/invitation/InvitationPage';
 import ProjectPage from '../page/project/ProjectPage';
-import PhoneSettings from '../pages/phone-settings/PhoneSettings';
 import SearchPage from '../page/search/SearchPage';
 
 
