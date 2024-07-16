@@ -13,7 +13,7 @@ import DashboardProjectCard from '../dashboard/component/DashboardProjectCard'
 const NotificationPage = () => {
   return (
     <IonPage>
-      <IonHeader>
+      <IonHeader style={{boxShadow: 'none'}}>
         <IonToolbar>
           <IonButtons slot="start">
             <IonBackButton />

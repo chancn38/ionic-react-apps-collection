@@ -8,7 +8,7 @@ import { ThemeProvider } from './context/ThemeContext'
 const container = document.getElementById('root')
 const root = createRoot(container!)
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <ThemeProvider>
       <AuthProvider>
         <ContextProvider>
@@ -16,5 +16,5 @@ root.render(
         </ContextProvider>
       </AuthProvider>
     </ThemeProvider>
-  </React.StrictMode>
+  // </React.StrictMode>
 )

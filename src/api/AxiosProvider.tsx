@@ -3,12 +3,17 @@ import axios from 'axios'
 const baseUrl = "https://testing.eiman.de/api/";
 const access_token = '2|yvpPPYUbbJsQaHdNpxxfnN5skOrKLUEKBTbcKhm6';
 
-//DASHBOARD STATS
+//DASHBOARD
 const dashboardStatsEndpoint = `${baseUrl}get_dash`;
 const dashboardProjectListEndpoint = `${baseUrl}getmyproj`;
 const projectDetailsEndpoint = `${baseUrl}getprojinfo`;
+//PROJECTS
 const projectPageGetStatsEndpoint = `${baseUrl}getstat`;
 const projectListsEndpoint = `${baseUrl}getallproj`;
+//INVITATION
+const invitationListsEndpoint = page => `${baseUrl}getinvite?page=${page}`;
+//NOTIFICATION
+const notificationListsEndpoint = page => `${baseUrl}getinvite?page=${page}`;
 
 const apiCall = async (endpoint, params, method) => {
   const options = {
@@ -44,4 +49,14 @@ export const projectPageGetStats = (params) => {
 //list
 export const projectLists = (params) => {
   return apiCall(projectListsEndpoint, params, 'post');
+}
+
+//INVITATION
+export const invitationLists = (page, params) => {
+  return apiCall(invitationListsEndpoint(page), params, 'post');
+}
+
+//NOTIFICATION
+export const notificationLists = (page, params) => {
+  return apiCall(invitationListsEndpoint(page), params, 'post');
 }

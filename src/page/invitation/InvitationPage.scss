@@ -1,0 +1,162 @@
+.container-card {
+  margin: 0;
+  box-shadow: none;
+  border-radius: 0;
+  .invitation-card {
+    margin: 0;
+    box-shadow: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 0;
+    background: #f4f5f8;
+    .invitation-image {
+      box-shadow: none;
+      width: 60px;
+      border-radius: 50%;
+      margin: 0;
+      margin-left: -5px;
+    }
+    .invitation-initials {
+      box-shadow: none;
+      width: 60px;
+      border-radius: 50%;
+      margin: 0;
+      margin-left: -5px;
+    }
+    .accent_color {
+      font-size: 50px;
+      padding-left: 20px;
+    }
+    .invitation-icon {
+      box-shadow: none;
+      margin-top: -25px;
+      margin-left: 30px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .invitation-ellipse-button {
+    --background: none;
+    color: #000;
+    --box-shadow: none;
+    margin-left: -25px;
+  }
+}
+
+.invitation-container-detail {
+  box-shadow: none;
+  display: flex;
+  justify-content: center;
+}
+.invitation-image-detail {
+  box-shadow: none;
+  width: 60px;
+  border-radius: 50%;
+  bottom: 10px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-btn {
+  box-shadow: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgb(190, 187, 187);
+}
+.invitation-menu-icon {
+  margin-left: 5px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+ion-modal#accept-modal {
+  --width: 85%;
+  --height: fit-content;
+  --border-radius: 5px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+  --backdrop-opacity: 0.6;
+}
+
+ion-modal#info-modal {
+  --width: 75%;
+  --height: fit-content;
+  --border-radius: 5px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+  --backdrop-opacity: 0;
+}
+
+.invitation-menu-popover {
+  --width: 70%;
+}
+
+.invitation-filter {
+  border-radius: 0;
+  box-shadow: none;
+}
+.filter-item {
+  padding-left: 10px;
+  font-size: 14px !important;
+}
+
+.accept-btn {
+  box-shadow: none;
+  background: none;
+  color: #fff;
+  border-radius: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding-top: 15px;
+}
+
+//accept modal header (icon and project name)
+.p-header-container{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+  .p-header-icon{
+    // background: #d5eef7;
+    // color: #58bdde;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 50%;
+  }
+
+  .p-header-name{
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+}
+
+.strong-light{
+  strong{
+    color: #343A40;
+  }
+}
+.strong-dark{
+  strong{
+    color: #ACBFD2;
+  }
+}
+
+.invitation-info{
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 0;
+}
+
+@media only screen and (max-width: 360px) {
+  .invitation-info{
+    padding-left: 30px;
+  }
+}

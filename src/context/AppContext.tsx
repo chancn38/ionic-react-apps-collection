@@ -12,6 +12,8 @@ export const ContextProvider = ({ children }: any) => {
     return themeFromLocalStorage ? themeFromLocalStorage : 'light'
   });
 
+  const domain = useState("https://testing.eiman.de");  
+
   const [projectFilter, setprojectFilter] = useState("active");
   const [searchProject, setSearchProject] = useState("");
 
@@ -21,6 +23,7 @@ export const ContextProvider = ({ children }: any) => {
 
   return <StateContext.Provider value={{
     currentMode,
+    domain,
     projectFilter, setprojectFilter,
     searchProject, setSearchProject
   }}>{children}</StateContext.Provider>

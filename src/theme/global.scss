@@ -2,4 +2,10 @@
 //     background-color: var(--ion-background-color);
 //     color: var(--ion-text-color);
 //   }
-  
+.notif-image {
+    box-shadow: none;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin: 0;
+  }

@@ -64,9 +64,9 @@ const App: React.FC = () => {
   useEffect(() => {
     StatusBar.setBackgroundColor({ color: '#f4f5f8' })
     StatusBar.setStyle({ style: Style.Dark })
-    setTimeout(() => {
-      SplashScreen.hide()
-    }, 1000)
+    // setTimeout(() => {
+    //   SplashScreen.hide()
+    // }, 1000)
   }, [])
 
   return (
