@@ -1,0 +1,127 @@
+.project-header {
+  background: #f4f5f8;
+  box-shadow: none;
+  margin: 10px;
+  .project-label {
+    position: absolute;
+    top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .add-btn {
+    margin: 0;
+    padding: 0;
+  }
+}
+.dark-card {
+  background-color: #313841;
+}
+.count-container {
+  padding: 10px;
+  color: #fff;
+}
+.card-icon {
+  color: #fff;
+  font-size: 50px;
+}
+
+.item-text {
+  font-size: 14px;
+}
+.menu-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.menu-actionsheet {
+  --border-radius: 20px;
+}
+
+.ribbon-tag {
+  width: 60px;
+  height: 16px;
+  background: #6d757d;
+  //box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+ion-modal#project-modal {
+  --width: 75%;
+  --height: fit-content;
+  --border-radius: 15px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+ion-modal#announcement-modal {
+  --width: 90%;
+  --height: fit-content;
+  --border-radius: 15px;
+  --box-shadow: 0 28px 48px rgba(0, 0, 0, 0.4);
+}
+
+//for trash modal
+.confirm-btn {
+  --box-shadow: none;
+  --background: #438ed2;
+  --border-radius: 2px;
+  float: right;
+  width: 100px;
+  text-transform: none;
+  font-size: 12px;
+}
+
+.cancel-btn {
+  --box-shadow: none;
+  --background: #d0deee;
+  --border-radius: 2px;
+  color: #000;
+  float: left;
+  width: 100px;
+  text-transform: none;
+  font-size: 12px;
+}
+
+.cancel-reply-btn {
+  --box-shadow: none;
+  --background: #d0deee;
+  --border-radius: 2px;
+  color: #000;
+  float: right;
+  width: 100px;
+  text-transform: none;
+  font-size: 12px;
+}
+
+//for project icons list
+.choose-project-icon {
+  background-color: rgb(218, 220, 222);
+  width: 50px;
+  height: 50px;
+  box-shadow: none;
+  margin: 0;
+  text-align: center;
+}
+
+.filter-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: none;
+  background: none;
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 5px;
+  height: 50px;
+  padding: 0 0 0 2PX;
+}
+
+.bg-1 {
+  background: #78c350;
+}
+.bg-2 {
+  background: #8892d6;
+}
+.bg-3 {
+  background: #45bce0;
+}
+.bg-4 {
+  background: #f062a4;
+}

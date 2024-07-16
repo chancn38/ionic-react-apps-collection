@@ -11,10 +11,10 @@ import {
 } from '@ionic/react'
 import Pusher from 'pusher-js'
 import { useParams } from 'react-router-dom'
-import DashboardProjectCard from '../../components/card/DashboardProjectCard'
-import DashboardStatCard from '../../components/card/DashboardStatCard'
 import PullRefresh from '../../components/refresher/PullRefresh'
 import './Home.css'
+import DashboardStatCard from '../../page/dashboard/component/DashboardStatCard'
+import DashboardProjectCard from '../../page/dashboard/component/DashboardProjectCard'
 
 const pusher = new Pusher('8073cecf96f76974413e', {
   cluster: 'ap2',

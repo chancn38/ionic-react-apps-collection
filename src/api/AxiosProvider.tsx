@@ -6,6 +6,9 @@ const access_token = '2|yvpPPYUbbJsQaHdNpxxfnN5skOrKLUEKBTbcKhm6';
 //DASHBOARD STATS
 const dashboardStatsEndpoint = `${baseUrl}get_dash`;
 const dashboardProjectListEndpoint = `${baseUrl}getmyproj`;
+const projectDetailsEndpoint = `${baseUrl}getprojinfo`;
+const projectPageGetStatsEndpoint = `${baseUrl}getstat`;
+const projectListsEndpoint = `${baseUrl}getallproj`;
 
 const apiCall = async (endpoint, params, method) => {
   const options = {
@@ -31,4 +34,14 @@ export const projectDashboardStats = (params) => {
 }
 export const dashboardProjectList = (params) => {
   return apiCall(dashboardProjectListEndpoint, params, 'post');
+}
+export const projectDetails = (params) => {
+  return apiCall(projectDetailsEndpoint, params, 'post');
+}
+export const projectPageGetStats = (params) => {
+  return apiCall(projectPageGetStatsEndpoint, params, 'post');
+}
+//list
+export const projectLists = (params) => {
+  return apiCall(projectListsEndpoint, params, 'post');
 }

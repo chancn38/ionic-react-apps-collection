@@ -12,6 +12,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@asseinfo/react-kanban": "^2.2.0",
     "@capacitor-mlkit/barcode-scanning": "^6.1.0",
     "@capacitor-mlkit/face-detection": "^6.1.0",
     "@capacitor-mlkit/translation": "^6.1.0",
