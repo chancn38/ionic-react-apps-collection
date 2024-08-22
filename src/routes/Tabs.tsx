@@ -10,7 +10,7 @@ import SearchPage from '../page/search/SearchPage';
 const Tabs: React.FC = () => (
   <IonTabs>
     <IonRouterOutlet>
-      <Redirect exact path="/tabs" to="/tabs/dashboard" />
+      
       <Route exact path="/tabs/dashboard">
         <DashboardPage/>
       </Route>

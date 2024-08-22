@@ -17,6 +17,7 @@ import QRCode from 'qrcode.react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router'
 import qrcode from '../../assets/images/qrcode.png'
+import icon from '../../assets/images/logo-dark.png' // Import your icon or image
 
 const QRCodeGenerator: React.FC = () => {
   const { name } = useParams<{ name: string }>()
@@ -50,17 +51,6 @@ const QRCodeGenerator: React.FC = () => {
     // Call the function to check and create directory
     checkDirectory()
   }, [])
-
-  // const downloadCardAsImage = () => {
-  //   const cardElement = document.getElementById('qrcode');
-    
-  //   html2canvas(cardElement).then(canvas => {
-  //     const link = document.createElement('a');
-  //     link.href = canvas.toDataURL('image/png');
-  //     link.download = 'business-card.png';
-  //     link.click();
-  //   });
-  // };
 
   const handleDownload = async () => {
     const canvas = document.getElementById('qrcode') as HTMLCanvasElement
@@ -102,7 +92,19 @@ const QRCodeGenerator: React.FC = () => {
           <div className='ion-text-center enable-bio-card'>
             {text ? (
               <div className='ion-padding'>
-                <QRCode id='qrcode' value={text} size={250} />
+                <QRCode 
+                  id='qrcode' 
+                  value={text} 
+                  size={250} 
+                  imageSettings={{
+                    src: icon, // Your icon image
+                    x: undefined,
+                    y: undefined,
+                    height: 50, // Adjust height of the icon
+                    width: 50,  // Adjust width of the icon
+                    excavate: true // This will make sure the image is clearly visible
+                  }}
+                />
               </div>
             ) : (
               <img alt='qr' src={qrcode} width={300} />
